@@ -118,5 +118,21 @@ Paste the commands you ran to install the web server and create `index.html`:
 ![Welcome to the EC2 Challenge](images/10-challenge-browser.png)
 
 ---
+## Questions
 
+1. Your security group has an SSH rule and an HTTP rule. What does each one let you do? What would stop working if you deleted the HTTP rule?
+2. In Part 1.1 you never logged in to install the web server. What installed it, and when did it run?
+3. Why does the web page open with `http://` but not with `https://`?
+4. Part 1.2 asked for a 10 GiB root volume. Where in the launch settings did you set it, and how can you check the size on the running instance?
+
+### Answer
+
+1. What do the SSH and HTTP rules allow? What happens if the HTTP rule is deleted?
+The SSH rule (port 22) lets me connect to my EC2 instance remotely. The HTTP rule (port 80) lets me open the web page in a browser. If I delete the HTTP rule, I can still use SSH, but the web page will not open.
+2. What installed the web server, and when did it run?
+The User Data script installed the web server automatically when the EC2 instance started for the first time. I didn't need to log in and install Apache myself.
+3. Why does the web page open with HTTP but not HTTPS?
+HTTP works because Apache is serving the page on port 80, which the security group allows. HTTPS doesn't work because it hasn't been configured on the server, and port 443 isn't allowed.
+4. Where did you set the 10 GiB root volume, and how can you check it?
+I set it to 10 GiB in the Configure storage section when launching the instance. I can check it in the EC2 instance's Storage tab or connect with SSH and run lsblk to see the disk size.
 ---
