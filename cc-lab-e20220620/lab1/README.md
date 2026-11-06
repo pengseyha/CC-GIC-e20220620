@@ -89,4 +89,34 @@ Welcome to the EC2 Challenge
 
 The webpage worked locally, but the public IP connection timed out. This step was not completed.
 
+## Part 1.2 — EC2 Web Solution (Challenge)
+
+### Launch configuration
+
+![Launch configuration](images/06-challenge-launch.png)
+
+### Security group
+
+![Challenge security group](images/07-challenge-security-group.png)
+
+### Running instance
+
+![Challenge instance](images/08-challenge-instance.png)
+
+### Commands on the instance
+
+![Terminal commands](images/09-challenge-terminal.png)
+
+Paste the commands you ran to install the web server and create `index.html`:
+
+```bash
+
+```
+
+### Browser test
+
+![Welcome to the EC2 Challenge](images/10-challenge-browser.png)
+
+---
+
 ---
